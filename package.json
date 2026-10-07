@@ -1,0 +1,38 @@
+{
+  "name": "employee-leave-management",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@cap-js/postgres": "^3.1.1",
+    "@sap/cds": "^10"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^3"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "db:migrate": "node scripts/migrate.mjs"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "[development]": {
+          "kind": "sqlite",
+          "credentials": { "url": "db.sqlite" }
+        },
+        "[production]": {
+          "kind": "postgres",
+          "pool": { "min": 0, "max": 5, "acquireTimeoutMillis": 30000 }
+        }
+      },
+      "auth": {
+        "kind": "custom",
+        "impl": "./srv/auth.cjs"
+      }
+    }
+  },
+  "private": true
+}
