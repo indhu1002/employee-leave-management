@@ -52,3 +52,7 @@ After backing up the database and reviewing model changes, run `npm run db:migra
 Render's free service can sleep when idle; the next visit can take longer to load. Neon keeps the database outside Render's temporary filesystem. App sessions currently live in memory, so users sign in again after restarts. Use one app instance with this session implementation. Free services have usage quotas; do not select a paid plan if you want to stay free.
 
 References: [Render free services](https://render.com/docs/free), [Render environment variables](https://render.com/docs/configure-environment-variables), [CAP PostgreSQL](https://cap.cloud.sap/docs/guides/databases/postgres).
+
+## Public demo sign-in details
+
+This demonstration website intentionally displays the sample employee and manager sign-ins below the login form, expanded by default. `AUTH_USERS_JSON` still controls the actual accounts and server-side role checks. The displayed details are maintained in `app/leave-management/webapp/index.html`; keep them in sync with the configured demo accounts. For a private company deployment, remove the demo details from the HTML before publishing.

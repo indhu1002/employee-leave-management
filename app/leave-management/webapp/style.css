@@ -142,9 +142,9 @@ td.reason-cell { max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
 .login-submit:hover { filter: brightness(.95); }
 .login-submit .icon { width: 16px; }
 .login-error { margin: 12px 0 0; color: #af2535; font-size: 12px; }
-.demo-help { margin-top: 20px; color: #60768e; font-size: 11px; }
+.demo-help { margin-top: 20px; padding: 14px 16px; color: #405a75; background: #f3f8fe; border: 1px solid #dbe8f6; border-radius: 8px; font-size: 12px; overflow-wrap: anywhere; }
 .demo-help summary { cursor: pointer; color: #236eb8; font-weight: 700; }
-.demo-help p { line-height: 1.5; }
+.demo-help p { margin: 12px 0 0; line-height: 1.6; }
 .login-footnote { margin: 23px 0 0; color: #8da1b4; font-size: 11px; }
 @media (max-width: 850px) { .login-screen { grid-template-columns: 1fr; } .login-story { min-height: 220px; padding: 24px; } .login-story-content { display: none; } .login-story-footer { display: none; } .login-side { min-height: calc(100vh - 220px); } }
 @media (max-width: 480px) { .login-story { min-height: 135px; } .login-brand { font-size: 15px; } .login-side { min-height: calc(100vh - 135px); padding: 20px 15px; } .login-card { padding: 25px; } .top-actions { gap: 7px; } .logout-button { padding: 6px; font-size: 10px; } .profile-role { display: none; } }

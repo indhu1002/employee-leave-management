@@ -385,7 +385,5 @@ fetch('/auth/me', { credentials: 'same-origin' })
     .then(async (response) => response.ok ? showApp(await response.json()) : showLogin())
     .catch(() => showLogin());
 
-fetch('/auth/config')
-    .then((response) => response.json())
-    .then((config) => { $('.demo-help').hidden = !config.demoAccess; })
-    .catch(() => {});
+// This public demo intentionally shows the sample sign-ins in the login HTML.
+// Account configuration and role permissions are enforced by the server.
