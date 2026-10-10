@@ -27,6 +27,8 @@ Open <http://localhost:4004/leave-management/webapp/index.html>.
 | Employee | Priya | `priya@company.com` | `Employee@123!` |
 | Manager | Asha Menon | `manager@company.com` | `Manager@123!` |
 
+Login emails come from `srv/auth.cjs` locally or `AUTH_USERS_JSON` in production. The employee CSV supplies profile data, not login credentials. Keep both emails consistent. Hosted startup corrects the original Rahul and Priya sample profile emails to match their `@company.com` logins, without reimporting other records.
+
 The development database is `db.sqlite` in the project folder. On its first start, the app creates this database and imports the CSV files from `db/data`. Subsequent starts use the existing database without reimporting the CSV files.
 
 ## Which files do I edit to add a user?
